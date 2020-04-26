@@ -25,7 +25,7 @@
 Kafka是一个基于发布订阅模式的消息队列，发布到消息队列里的一条消息可以被多个消费者进行消费。
 
 #### 1、Kafka架构
-![](https://github.com/XiangXiangQq3/Xstudio/blob/Pictures/Kafka%E6%9E%B6%E6%9E%84.png)
+![Kafka架构](https://github.com/XiangXiangQq3/Xstudio/blob/Pictures/Kafka%E6%9E%B6%E6%9E%84.png)
 1）生产者：Producer 消息队列的生产者，向Kafka的topic里打入数据。
 
 2）消费者：Consumer 消息队列的消费者，消费Kafka的topic里的数据。
@@ -58,7 +58,7 @@ topic是一个逻辑上的概念，而物理上，数据的处理的对象都是
 
 上述说到，每一个partition都对应着一个log，生产者生产的消息不断的追加log文件的末尾。为了防止log文件过大，Kafka使用**分片和索引的机制**，将每一个partition分为多个segment，每一个segment对应两个文件 **.log和.index**文件。
 
-![](C:\Users\Dell\Desktop\key_Conclusion\Snipaste_2020-04-26_14-25-32.png)
+![segment](https://github.com/XiangXiangQq3/Xstudio/blob/Pictures/Segment.png)
 
 .index 文件存储大量的索引信息，.log文件存储大量的数据，索引文件元数据指的是对应.log文件中偏移量的地址。也就是说索引文件存储的是偏移量信息，通过索引文件中的偏移量可以对.log文件找到确切的数据。
 
