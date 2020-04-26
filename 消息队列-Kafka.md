@@ -25,9 +25,7 @@
 Kafka是一个基于发布订阅模式的消息队列，发布到消息队列里的一条消息可以被多个消费者进行消费。
 
 #### 1、Kafka架构
-
-https://github.com/XiangXiangQq3/Xstudio/blob/Pictures/Kafka%E6%9E%B6%E6%9E%84.png
-
+![](https://github.com/XiangXiangQq3/Xstudio/blob/Pictures/Kafka%E6%9E%B6%E6%9E%84.png)
 1）生产者：Producer 消息队列的生产者，向Kafka的topic里打入数据。
 
 2）消费者：Consumer 消息队列的消费者，消费Kafka的topic里的数据。
