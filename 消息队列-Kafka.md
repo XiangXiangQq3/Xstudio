@@ -26,7 +26,7 @@ Kafka是一个基于发布订阅模式的消息队列，发布到消息队列里
 
 #### 1、Kafka架构
 
-![](C:\Users\Dell\Desktop\key_Conclusion\Snipaste_2020-04-15_23-31-59.png)
+https://github.com/XiangXiangQq3/Xstudio/blob/Pictures/Kafka%E6%9E%B6%E6%9E%84.png
 
 1）生产者：Producer 消息队列的生产者，向Kafka的topic里打入数据。
 
