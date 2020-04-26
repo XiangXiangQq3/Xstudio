@@ -26,7 +26,7 @@ Kafka是一个基于发布订阅模式的消息队列，发布到消息队列里
 
 #### 1、Kafka架构
 
-![Kafka架构](https://tse1-mm.cn.bing.net/th/id/OIP.aEDqlO75im7TYzuNTf1NlQHaE8?pid=Api&rs=1)
+![Kafka架构](https://img-blog.csdnimg.cn/20200426163455376.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk0MzcyOQ==,size_16,color_FFFFFF,t_70)
 
 1）生产者：Producer 消息队列的生产者，向Kafka的topic里打入数据。
 
@@ -60,7 +60,7 @@ topic是一个逻辑上的概念，而物理上，数据的处理的对象都是
 
 上述说到，每一个partition都对应着一个log，生产者生产的消息不断的追加log文件的末尾。为了防止log文件过大，Kafka使用**分片和索引的机制**，将每一个partition分为多个segment，每一个segment对应两个文件 **.log和.index**文件。
 
-![segment](https://github.com/XiangXiangQq3/Xstudio/blob/Pictures/Segment.png)
+![segment](https://img-blog.csdnimg.cn/2020042616351764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk0MzcyOQ==,size_16,color_FFFFFF,t_70)
 
 .index 文件存储大量的索引信息，.log文件存储大量的数据，索引文件元数据指的是对应.log文件中偏移量的地址。也就是说索引文件存储的是偏移量信息，通过索引文件中的偏移量可以对.log文件找到确切的数据。
 
